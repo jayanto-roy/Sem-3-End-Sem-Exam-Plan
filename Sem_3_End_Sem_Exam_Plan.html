@@ -88,6 +88,18 @@ footer{text-align:center;color:var(--muted);padding:25px 15px;font-size:.82rem}
  .stat{border:1px solid #ccc;background:#fff;color:#111}.stat strong{color:#111}
  main{max-width:none;margin:0;padding:0}.phase{break-inside:avoid}
 }
+
+/* Subject-wise syllabus accordion */
+.syllabus-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.syllabus-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:15px;box-shadow:0 5px 18px rgba(15,35,65,.04)}
+.syllabus-card summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:850;color:var(--navy)}
+.syllabus-card summary::-webkit-details-marker{display:none}
+.syllabus-card summary:after{content:'+';font-size:1.25rem;color:var(--blue)}
+.syllabus-card[open] summary:after{content:'−'}
+.unit-list{padding-left:20px;margin:12px 0 2px}.unit-list li{margin:10px 0;color:#45556c;font-size:.9rem}.unit-list strong{color:#203653}
+.subject-code{font-size:.74rem;color:var(--muted);font-weight:700}
+@media(max-width:760px){.syllabus-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -105,7 +117,7 @@ footer{text-align:center;color:var(--muted);padding:25px 15px;font-size:.82rem}
  </div>
 </header>
 <nav><div class="navinner">
- <a href="#exams">Exam schedule</a><a href="#routine">Daily routine</a><a href="#plan">20-day plan</a><a href="#focus">Subject focus</a><a href="#final">Final revision</a><a href="#tracker">Progress tracker</a>
+ <a href="#exams">Exam schedule</a><a href="#subjects">Subject-wise syllabus</a><a href="#routine">Daily routine</a><a href="#plan">20-day plan</a><a href="#focus">Subject focus</a><a href="#final">Final revision</a><a href="#tracker">Progress tracker</a>
 </div></nav>
 <main>
 <section id="exams">
@@ -121,8 +133,58 @@ footer{text-align:center;color:var(--muted);padding:25px 15px;font-size:.82rem}
  <div class="notice"><strong>Timetable note:</strong> The 14 December and 16 December columns appear blank in the supplied image. The timetable states an overall examination period of 30 November–24 December. Check the university's latest official notice for any updates.</div>
 </section>
 
+
+<section id="subjects">
+ <div class="section-head"><div><h2>2. Subject-wise syllabus – all units</h2><div class="small">Complete topic list for all 6 subjects, organized unit by unit. Select a subject to expand its units.</div></div><span class="phase-pill">6 Subjects · 30 Units</span></div>
+ <div class="syllabus-grid">
+  <details class="syllabus-card"><summary><span>Environmental Studies (EVS)<br><span class="subject-code">25UCT-201 · 5 Units</span></span></summary><ol class="unit-list">
+   <li><strong>Unit 1 – Introduction & Ecosystem:</strong> Environmental studies: definition, concepts, scope and importance; environmental risk principles; environmental significance of GM organisms/biotechnology; integrated approach and market mechanisms; ecosystem structure and functions; indicator and keystone species; biodiversity and ecosystem services.</li>
+   <li><strong>Unit 2 – Environmental Pollution:</strong> Introduction to environmental pollution; air and noise pollution; water and soil pollution; sources, effects and control; nuclear hazards and thermal pollution; solid-waste management; 3R concept; biomagnification and eutrophication.</li>
+   <li><strong>Unit 3 – Climate Change:</strong> Climate change and global warming; acid rain and natural disasters; global climate-change projections; impacts, vulnerability and adaptation; climate-change mitigation and national initiatives; AI algorithms for climate prediction.</li>
+   <li><strong>Unit 4 – Ethics, Conservation & Society:</strong> Environmental ethics and ecological values; role of Indian religions and cultures in conservation; environmental communication and public awareness; energy conservation and water conservation; environmental movements including Chipko, Silent Valley and Bishnoi; resettlement and rehabilitation.</li>
+   <li><strong>Unit 5 – Environmental Laws:</strong> Introduction to environmental laws and policies; Environment (Protection) Act, 1986; Noise Pollution Rules and Biomedical Waste Management Rules; role of magistracy, higher courts and regulatory bodies; international agreements including Montreal and Kyoto protocols; Corporate Social Responsibility (CSR).</li>
+  </ol></details>
+  <details class="syllabus-card"><summary><span>Data Structures (DSA)<br><span class="subject-code">25CSH-209 · 5 Units</span></span></summary><ol class="unit-list">
+   <li><strong>Unit 1 – Data Structures, Arrays & Linked Lists:</strong> Overview of data structures; primitive and non-primitive data types; algorithms and efficiency; best, worst and average-case complexity; asymptotic notations; time-space trade-off; ADT; arrays and multidimensional arrays; row-major and column-major representation; sparse matrices; singly, doubly and circular linked lists with insertion, deletion and traversal.</li>
+   <li><strong>Unit 2 – Stack & Queue:</strong> Stack and push/pop operations; array and linked-list implementation; applications of stack; prefix and postfix expressions and postfix evaluation; recursion and tail recursion; iteration vs recursion; Fibonacci and Tower of Hanoi; queues and their operations; deque, circular queue and priority queue.</li>
+   <li><strong>Unit 3 – Searching, Hashing & Sorting:</strong> Searching concepts and efficiency; linear and binary searching; hashing concepts and techniques; collision resolution; insertion sort, selection sort, quick sort, heap sort, merge sort, radix sort and shell sort.</li>
+   <li><strong>Unit 4 – Trees, Balanced Trees & Heaps:</strong> Tree definitions and properties; binary-tree representation using arrays and linked lists; BST; strict, complete, full, extended and skewed binary trees; inorder, preorder and postorder traversal; BST insertion, deletion, searching and updation; Huffman coding; AVL trees and rotations; B-Trees; binary heaps.</li>
+   <li><strong>Unit 5 – Graphs & Graph Algorithms:</strong> Graph concepts, terminology and types; adjacency matrix and adjacency list; DFS and BFS; connected components; spanning trees and minimum spanning trees; Prim’s and Kruskal’s algorithms; single-source and all-pairs shortest-path algorithm concepts.</li>
+  </ol></details>
+  <details class="syllabus-card"><summary><span>Discrete Mathematics<br><span class="subject-code">25MTT-202 · 5 Units</span></span></summary><ol class="unit-list">
+   <li><strong>Unit 1 – Mathematical Logic & Proof:</strong> Propositions and compound propositions; logical operators and truth tables; laws of logic and logical equivalence; tautology, contradiction and contingency; implication and biconditional; universal and existential quantifiers; rules of inference; proof by contradiction; mathematical induction.</li>
+   <li><strong>Unit 2 – Sets & Functions:</strong> Introduction to sets and types of sets; subsets and power sets; Venn diagrams and set operations; Cartesian product; functions and their types; one-to-one, onto and bijective functions; composition, inverse and recursive functions.</li>
+   <li><strong>Unit 3 – Relations & Boolean Algebra:</strong> Binary relations and their properties; reflexive, symmetric, antisymmetric and transitive relations; equivalence relations and equivalence classes; partitions of sets; partial ordering relations; Hasse diagrams; lattices and their properties; Boolean algebra; applications in digital logic.</li>
+   <li><strong>Unit 4 – Counting & Recurrence:</strong> Basic counting principles; addition and multiplication rules; permutations and combinations; binomial theorem and Pascal’s identity; pigeonhole principle; inclusion-exclusion principle; recurrence relations and linear recurrence; generating functions; applications in algorithm analysis.</li>
+   <li><strong>Unit 5 – Graph Theory:</strong> Introduction to graphs and types of graphs; degree of a vertex, paths and circuits; Euler graphs; Hamiltonian graphs; trees and their properties; spanning trees and minimum spanning trees; graph coloring; applications of graph theory.</li>
+  </ol></details>
+  <details class="syllabus-card"><summary><span>Python Programming<br><span class="subject-code">25CSH-214 · 5 Units</span></span></summary><ol class="unit-list">
+   <li><strong>Unit 1 – Computer Programs & Python Basics:</strong> Need for programming; human and computer programming languages; computer hardware/software interaction; interpreter and compiler; reserved words; history and installation of Python; Python prompt and traceback; writing a Python program; input/output; sequential, conditional and repeated execution; reuse through functions; types of errors.</li>
+   <li><strong>Unit 2 – Values, Variables & Debugging:</strong> Values and data types; variables and naming rules; keywords and statements; operators and expressions; order of operations; conditional execution; Boolean expressions; chained and nested conditionals; try-except and debugging.</li>
+   <li><strong>Unit 3 – Built-in & User-defined Functions:</strong> Built-in functions; type conversion; math functions; user-defined functions; parameters and arguments; creating functions for business applications; financial statement analysis; goodwill and related business calculations.</li>
+   <li><strong>Unit 4 – Loops, Files & Collections:</strong> While and for loops; updating variables; file operations – open, read, search and write text files; lists, traversal, operations and slicing; dictionaries and their operations/file use; tuples, immutability and comparison.</li>
+   <li><strong>Unit 5 – GUI with Tkinter:</strong> Introduction to GUI applications and Tkinter; adding widgets – Label, Entry and Button; event handling and button clicks; mouse events; layout management using pack, grid and place.</li>
+  </ol></details>
+  <details class="syllabus-card"><summary><span>Database Management System (DBMS)<br><span class="subject-code">25CSH-211 · 5 Units</span></span></summary><ol class="unit-list">
+   <li><strong>Unit 1 – DBMS & Relational Model:</strong> Introduction to DBMS and database systems; three-schema architecture and data independence; relational data model and concepts; super key, candidate key, primary key, foreign key and other keys; entity and referential integrity constraints; relational algebra – selection, projection, union, intersection, difference, Cartesian product, join, division, rename and extended operations; tuple relational calculus (TRC); domain relational calculus (DRC); equivalence of relational queries.</li>
+   <li><strong>Unit 2 – ER Model & Normalization:</strong> Entity-Relationship modeling; weak entities, specialization, generalization and aggregation; mapping ER model to relational model; functional dependencies and their types; attribute closure and candidate keys; 1NF, 2NF, 3NF, BCNF, 4NF and 5NF; lossless join and dependency preservation.</li>
+   <li><strong>Unit 3 – SQL & Database Programming:</strong> DDL commands – CREATE, ALTER, DROP and related commands; DML – INSERT, UPDATE and DELETE; SELECT query formulation; GROUP BY, HAVING and aggregate functions; inner and outer joins; nested and correlated subqueries; views and constraints; triggers and stored procedures; indexing commands and transaction control.</li>
+   <li><strong>Unit 4 – Transactions & Concurrency:</strong> Transaction concepts and ACID properties; schedules and types of schedules; conflict and view serializability; precedence graphs and correctness; concurrency control and two-phase locking (2PL); timestamp ordering; deadlocks; logging, checkpointing and crash recovery.</li>
+   <li><strong>Unit 5 – Storage, Indexing & Modern Databases:</strong> Physical storage organization and file structures; B-Tree and B+ Tree indexing; multilevel indexing and performance; query-processing architecture and cost-based optimization; NoSQL databases; CAP theorem; database security and related concepts.</li>
+  </ol></details>
+  <details class="syllabus-card"><summary><span>Computer Organization & Architecture (COA)<br><span class="subject-code">25CST-208 · 5 Units</span></span></summary><ol class="unit-list">
+   <li><strong>Unit 1 – Introduction to Digital Fundamentals:</strong> Number systems – decimal, binary, octal and hexadecimal; base conversions; binary arithmetic (addition and subtraction); signed and unsigned numbers; logic gates; K-Map for 2, 3 and 4 variables; adders and subtractors; multiplexers, encoders and decoders; sequential circuits – flip-flops, registers and counters.</li>
+   <li><strong>Unit 2 – Register Organization:</strong> Von Neumann architecture; register transfer and micro-operations; register transfer language (RTL); arithmetic, logic and shift micro-operations; bus and memory transfers; instruction cycle and computer registers; common bus system and computer instructions; addressing modes; basic computer design; general register organization; stack organization; instruction formats; data transfer and manipulation; program control; RISC and CISC.</li>
+   <li><strong>Unit 3 – Computer Arithmetic:</strong> Hardware implementation of addition and subtraction; multiplication algorithms; Booth’s multiplier; array multiplier; division algorithms; floating-point arithmetic and representation; floating-point addition, subtraction, multiplication and division.</li>
+   <li><strong>Unit 4 – Memory & I/O Organization:</strong> Memory hierarchy; RAM and ROM chips; memory address map and memory connection; associative memory and cache memory; virtual memory, paging and segmentation; auxiliary memory; magnetic disks and magnetic tapes; input-output interface; asynchronous data transfer; modes of transfer; priority interrupt; DMA and IOP.</li>
+   <li><strong>Unit 5 – Hardwired/Microprogrammed Control & Pipelining:</strong> Hardwired control; microprogrammed control; microinstructions and microprogram sequencing; pipelining; parallel processing and pipeline structure; speedup and efficiency; throughput and bottlenecks; arithmetic pipeline and instruction pipeline concepts.</li>
+  </ol></details>
+ </div>
+ <div class="notice"><strong>Syllabus source:</strong> Subject names, course codes and unit topics are organized from the uploaded Chandigarh University “All Subjects Semester 3rd” lecture-plan PDF. Topic wording is lightly cleaned for readability; refer to the official course document if any wording differs.</div>
+</section>
+
 <section id="routine">
- <div class="section-head"><div><h2>2. Your daily study routine</h2><div class="small">One subject per day · Study time: 5:00 PM–7:00 PM and 9:00 PM–12:00 AM</div></div></div>
+ <div class="section-head"><div><h2>3. Your daily study routine</h2><div class="small">One subject per day · Study time: 5:00 PM–7:00 PM and 9:00 PM–12:00 AM</div></div></div>
  <div class="card">
   <table class="routine"><thead><tr><th>Time</th><th>What to do</th><th>Study focus</th></tr></thead><tbody>
    <tr><td>5:00–5:15 PM</td><td>Quick start</td><td>Read yesterday's notes from the same subject and set today's target.</td></tr>
@@ -140,7 +202,7 @@ footer{text-align:center;color:var(--muted);padding:25px 15px;font-size:.82rem}
 </section>
 
 <section id="plan">
- <div class="section-head"><div><h2>3. Complete 20-day single-subject timetable</h2><div class="small">One subject each day · 8 November – 27 November 2026</div></div></div>
+ <div class="section-head"><div><h2>4. Complete 20-day single-subject timetable</h2><div class="small">One subject each day · 8 November – 27 November 2026</div></div></div>
  <div class="phase"><div class="phase-title"><h3>Phase 1 – Environmental Studies (EVS)</h3><span class="phase-pill">Days 1–3</span></div><div class="plan">
   <article class="day"><div class="daynum">01</div><div><div class="daydate">08 November · EVS</div><p><strong>Units 1–2:</strong> Introduction to Environmental Studies, risk assessment, GM organisms, ecosystem, indicator and keystone species, wetlands, mangroves, coral reefs, pollution and its types.</p></div></article>
   <article class="day"><div class="daynum">02</div><div><div class="daydate">09 November · EVS</div><p><strong>Units 2–3:</strong> Air, water, noise and soil pollution; nuclear and thermal hazards; solid waste, 3Rs, plastic pollution, biomagnification, eutrophication, climate change, global warming, ozone depletion and acid rain.</p></div></article>
@@ -177,7 +239,7 @@ footer{text-align:center;color:var(--muted);padding:25px 15px;font-size:.82rem}
 </section>
 
 <section id="focus">
- <div class="section-head"><h2>4. Subject-wise high-priority topics</h2><span class="small">Use these as your focused revision checklist</span></div>
+ <div class="section-head"><h2>5. Subject-wise high-priority topics</h2><span class="small">Use these as your focused revision checklist</span></div>
  <div class="subjects">
   <article class="subject"><h3>Environmental Studies (EVS)</h3><ul><li>Ecosystem, indicator and keystone species</li><li>Air, water and soil pollution</li><li>3Rs, biomagnification and eutrophication</li><li>Global warming, climate change and ozone depletion</li><li>Chipko, Silent Valley and Bishnoi movements</li><li>Environment Protection Act, 1986</li></ul></article>
   <article class="subject"><h3>Data Structures (DSA)</h3><ul><li>Linked List operations</li><li>Stack and Queue</li><li>Searching, hashing and sorting</li><li>BST and AVL rotations</li><li>BFS and DFS</li><li>Prim's and Kruskal's algorithms</li></ul></article>
@@ -189,7 +251,7 @@ footer{text-align:center;color:var(--muted);padding:25px 15px;font-size:.82rem}
 </section>
 
 <section id="final">
- <div class="section-head"><div><h2>5. Final revision before each examination</h2><div class="small">Use the days after the 20-day coverage round to revise the next exam subject.</div></div></div>
+ <div class="section-head"><div><h2>6. Final revision before each examination</h2><div class="small">Use the days after the 20-day coverage round to revise the next exam subject.</div></div></div>
  <div class="card" style="overflow-x:auto">
   <table class="final-table"><thead><tr><th>Date</th><th>Revision / examination task</th></tr></thead><tbody>
    <tr><td>28 Nov</td><td>EVS Units 1–3 complete revision</td></tr>
@@ -212,7 +274,7 @@ footer{text-align:center;color:var(--muted);padding:25px 15px;font-size:.82rem}
 </section>
 
 <section id="tracker">
- <div class="section-head"><div><h2>6. Personal progress tracker</h2><div class="small">Tick each task when you complete it. Your progress is saved in this browser.</div></div><button class="btn secondary" onclick="window.print()">Print / Save as PDF</button></div>
+ <div class="section-head"><div><h2>7. Personal progress tracker</h2><div class="small">Tick each task when you complete it. Your progress is saved in this browser.</div></div><button class="btn secondary" onclick="window.print()">Print / Save as PDF</button></div>
  <div class="card">
   <div class="progress-wrap"><strong>Overall preparation progress</strong><span class="progress-number" id="percent">0%</span></div>
   <div class="progressbar"><div id="bar"></div></div>
@@ -237,7 +299,7 @@ footer{text-align:center;color:var(--muted);padding:25px 15px;font-size:.82rem}
 </section>
 
 <section>
- <div class="section-head"><h2>7. Five rules for effective preparation</h2></div>
+ <div class="section-head"><h2>8. Five rules for effective preparation</h2></div>
  <div class="tiplist">
   <div class="tip"><strong>1. Theory</strong><br>Prepare definitions, explanations, examples and advantages/disadvantages.</div>
   <div class="tip"><strong>2. Numericals</strong><br>Practise 5–10 questions daily from Mathematics and COA.</div>
