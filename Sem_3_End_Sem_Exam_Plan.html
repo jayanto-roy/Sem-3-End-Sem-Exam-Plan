@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10233f">
+<title>3rd Semester End-Term | 20-Day Revision Plan</title>
+<style>
+:root{
+  --navy:#10233f;--blue:#2457a7;--sky:#eaf2ff;--ink:#17243a;
+  --muted:#64748b;--line:#e2e8f0;--bg:#f4f7fb;--white:#fff;
+  --green:#16834a;--green-bg:#eaf8ef;--amber:#a45b08;--amber-bg:#fff5df;
+  --shadow:0 12px 32px rgba(15,35,65,.08);--radius:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.6}
+a{color:inherit}
+header{background:linear-gradient(130deg,#10233f,#1e4b83);color:#fff;padding:34px 20px 28px}
+.wrap{max-width:1120px;margin:auto;padding:0 20px}
+.topline{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.eyebrow{text-transform:uppercase;letter-spacing:1.7px;font-size:.75rem;font-weight:800;color:#c5d9ff}
+h1{font-size:clamp(1.8rem,4vw,3rem);line-height:1.15;margin:12px 0}
+.subtitle{color:#dce8fa;max-width:720px;margin:0}
+.tag{display:inline-block;border:1px solid #ffffff55;background:#ffffff14;padding:7px 12px;border-radius:999px;font-size:.82rem;font-weight:700}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:25px}
+.stat{background:#ffffff12;border:1px solid #ffffff26;border-radius:14px;padding:13px}
+.stat strong{display:block;font-size:1.55rem}.stat span{font-size:.8rem;color:#dce8fa}
+nav{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line);overflow:auto}
+.navinner{max-width:1120px;margin:auto;padding:10px 20px;display:flex;gap:8px;white-space:nowrap}
+nav a{text-decoration:none;padding:8px 12px;border-radius:10px;color:#42536d;font-size:.88rem;font-weight:700}
+nav a:hover{background:var(--sky);color:var(--blue)}
+main{max-width:1120px;margin:26px auto;padding:0 20px 50px}
+section{scroll-margin-top:76px;margin:24px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+h2{font-size:1.45rem;margin:0;color:var(--navy)}
+h3{margin:0 0 8px;color:var(--navy);font-size:1.08rem}
+.small{font-size:.87rem;color:var(--muted)}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+.exam-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.exam{border:1px solid var(--line);border-radius:14px;padding:15px;background:#fff}
+.exam .date{font-weight:900;color:var(--blue);font-size:1.08rem}
+.exam .time{font-size:.78rem;color:var(--muted);margin-top:6px}
+.exam .code{font-size:.76rem;color:#52627a}
+.notice{background:var(--amber-bg);border:1px solid #f3d89c;color:#75450a;border-radius:13px;padding:13px 15px;font-size:.9rem;margin-top:14px}
+.routine{width:100%;border-collapse:collapse;overflow:hidden}
+.routine th,.routine td{padding:11px 12px;border-bottom:1px solid var(--line);text-align:left}
+.routine th{background:#f0f5fc;color:#31445f;font-size:.85rem}
+.routine td{font-size:.9rem}
+.phase{margin:18px 0 22px}
+.phase-title{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.phase-pill{font-size:.75rem;font-weight:800;background:var(--sky);color:var(--blue);padding:5px 10px;border-radius:999px}
+.plan{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.day{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff;display:flex;gap:12px}
+.daynum{flex:0 0 48px;height:48px;border-radius:12px;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:900}
+.daydate{font-size:.76rem;color:var(--blue);font-weight:800}
+.day p{margin:5px 0 0;font-size:.88rem;color:#40516a}
+.subjects{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.subject{border:1px solid var(--line);border-radius:14px;padding:16px;background:#fff}
+.subject ul{padding-left:19px;margin:8px 0 0;color:#45556c;font-size:.9rem}
+.subject li{margin:4px 0}
+.final-table{width:100%;border-collapse:collapse}
+.final-table th,.final-table td{padding:11px 12px;border-bottom:1px solid var(--line);text-align:left;font-size:.9rem}
+.final-table th{background:#f0f5fc}
+.exam-badge{display:inline-block;background:var(--green-bg);color:var(--green);font-size:.72rem;font-weight:900;padding:4px 8px;border-radius:999px}
+.progress-wrap{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}
+.progress-number{font-size:1.8rem;font-weight:900;color:var(--green)}
+.progressbar{height:11px;background:#e8edf3;border-radius:999px;overflow:hidden;margin:12px 0}
+.progressbar div{height:100%;width:0;background:linear-gradient(90deg,#16834a,#46b879);transition:width .2s}
+.checklist{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+.checkitem{display:flex;align-items:flex-start;gap:10px;padding:11px;border:1px solid var(--line);border-radius:12px;background:#fff;font-size:.9rem}
+.checkitem input{margin-top:4px;accent-color:var(--green);width:17px;height:17px}
+.checkitem.done span{text-decoration:line-through;color:#8995a5}
+.btn{border:0;background:var(--navy);color:#fff;padding:9px 13px;border-radius:10px;font-weight:800;cursor:pointer}
+.btn.secondary{background:#eef2f7;color:#35465f}
+.tiplist{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.tip{background:#fff;border:1px solid var(--line);padding:13px;border-radius:13px;font-size:.85rem}
+footer{text-align:center;color:var(--muted);padding:25px 15px;font-size:.82rem}
+@media(max-width:760px){
+ .hero-stats{grid-template-columns:repeat(2,1fr)}.exam-grid{grid-template-columns:repeat(2,1fr)}
+ .plan,.subjects,.checklist{grid-template-columns:1fr}.tiplist{grid-template-columns:repeat(2,1fr)}
+ .routine th,.routine td{padding:9px 7px;font-size:.82rem}
+}
+@media(max-width:430px){.exam-grid{grid-template-columns:1fr}.wrap,main{padding-left:14px;padding-right:14px}.card{padding:15px}}
+@media print{
+ nav,.btn{display:none!important}body{background:#fff}.card,.day,.exam,.subject{box-shadow:none;break-inside:avoid}
+ header{background:#fff;color:#111;padding:15px 0}header .subtitle,header .eyebrow,.stat span{color:#444}
+ .stat{border:1px solid #ccc;background:#fff;color:#111}.stat strong{color:#111}
+ main{max-width:none;margin:0;padding:0}.phase{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap">
+  <div class="topline"><div class="eyebrow">Chandigarh University · Uttar Pradesh</div><span class="tag">Academic Year 2026–27 · Semester III</span></div>
+  <h1>20-Day Single-Subject End-Term Revision Plan</h1>
+  <p class="subtitle">A structured one-subject-per-day preparation roadmap for all six subjects, with your chosen evening study hours. Start: 8 November 2026.</p>
+  <div class="hero-stats">
+   <div class="stat"><strong>6</strong><span>Subjects</span></div>
+   <div class="stat"><strong>30</strong><span>Units</span></div>
+   <div class="stat"><strong>20</strong><span>Preparation days</span></div>
+   <div class="stat"><strong>7–8 hrs</strong><span>Suggested daily study</span></div>
+  </div>
+ </div>
+</header>
+<nav><div class="navinner">
+ <a href="#exams">Exam schedule</a><a href="#routine">Daily routine</a><a href="#plan">20-day plan</a><a href="#focus">Subject focus</a><a href="#final">Final revision</a><a href="#tracker">Progress tracker</a>
+</div></nav>
+<main>
+<section id="exams">
+ <div class="section-head"><div><h2>1. Examination schedule</h2><div class="small">According to the timetable image provided.</div></div><span class="tag" style="background:#eaf8ef;color:#16834a;border-color:#c8ead5">30 Nov – 24 Dec 2026</span></div>
+ <div class="exam-grid">
+  <article class="exam"><div class="date">01 December</div><h3>Environmental Studies (EVS)</h3><div class="code">25UCT201</div><div class="time">10:00 AM – 1:00 PM · Slot I</div></article>
+  <article class="exam"><div class="date">03 December</div><h3>Data Structures (DSA)</h3><div class="code">25CSH-209</div><div class="time">10:00 AM – 1:00 PM · Slot I</div></article>
+  <article class="exam"><div class="date">05 December</div><h3>Discrete Mathematics</h3><div class="code">25MTT-202</div><div class="time">10:00 AM – 1:00 PM · Slot I</div></article>
+  <article class="exam"><div class="date">08 December</div><h3>Python Programming</h3><div class="code">25CSH-214</div><div class="time">10:00 AM – 1:00 PM · Slot I</div></article>
+  <article class="exam"><div class="date">10 December</div><h3>Database Management System</h3><div class="code">25CSH-211</div><div class="time">2:00 PM – 5:00 PM · Slot II</div></article>
+  <article class="exam"><div class="date">12 December</div><h3>Computer Organization &amp; Architecture</h3><div class="code">25CST-208</div><div class="time">10:00 AM – 1:00 PM · Slot I</div></article>
+ </div>
+ <div class="notice"><strong>Timetable note:</strong> The 14 December and 16 December columns appear blank in the supplied image. The timetable states an overall examination period of 30 November–24 December. Check the university's latest official notice for any updates.</div>
+</section>
+
+<section id="routine">
+ <div class="section-head"><div><h2>2. Your daily study routine</h2><div class="small">One subject per day · Study time: 5:00 PM–7:00 PM and 9:00 PM–12:00 AM</div></div></div>
+ <div class="card">
+  <table class="routine"><thead><tr><th>Time</th><th>What to do</th><th>Study focus</th></tr></thead><tbody>
+   <tr><td>5:00–5:15 PM</td><td>Quick start</td><td>Read yesterday's notes from the same subject and set today's target.</td></tr>
+   <tr><td>5:15–6:00 PM</td><td>Study session 1</td><td>Understand the first topic / concept.</td></tr>
+   <tr><td>6:00–6:10 PM</td><td>Short break</td><td>Rest your eyes and stretch.</td></tr>
+   <tr><td>6:10–7:00 PM</td><td>Study session 2</td><td>Continue the same subject; make short notes and diagrams.</td></tr>
+   <tr><td>7:00–9:00 PM</td><td>Long break</td><td>Dinner, refresh and rest. No compulsory study.</td></tr>
+   <tr><td>9:00–10:15 PM</td><td>Practice session 1</td><td>Solve questions, numericals, write programs or SQL as relevant.</td></tr>
+   <tr><td>10:15–10:25 PM</td><td>Short break</td><td>Take a 10-minute break.</td></tr>
+   <tr><td>10:25–11:30 PM</td><td>Practice session 2</td><td>Continue practice and write exam-style answers.</td></tr>
+   <tr><td>11:30 PM–12:00 AM</td><td>Daily self-test</td><td>Recall key points without notes and list doubts for tomorrow.</td></tr>
+  </tbody></table>
+  <div class="notice"><strong>One-subject rule:</strong> Study only the subject assigned to that date in both sessions. Use 5–7 PM for learning and notes; use 9 PM–12 AM for practice, answer writing and recall.</div>
+ </div>
+</section>
+
+<section id="plan">
+ <div class="section-head"><div><h2>3. Complete 20-day single-subject timetable</h2><div class="small">One subject each day · 8 November – 27 November 2026</div></div></div>
+ <div class="phase"><div class="phase-title"><h3>Phase 1 – Environmental Studies (EVS)</h3><span class="phase-pill">Days 1–3</span></div><div class="plan">
+  <article class="day"><div class="daynum">01</div><div><div class="daydate">08 November · EVS</div><p><strong>Units 1–2:</strong> Introduction to Environmental Studies, risk assessment, GM organisms, ecosystem, indicator and keystone species, wetlands, mangroves, coral reefs, pollution and its types.</p></div></article>
+  <article class="day"><div class="daynum">02</div><div><div class="daydate">09 November · EVS</div><p><strong>Units 2–3:</strong> Air, water, noise and soil pollution; nuclear and thermal hazards; solid waste, 3Rs, plastic pollution, biomagnification, eutrophication, climate change, global warming, ozone depletion and acid rain.</p></div></article>
+  <article class="day"><div class="daynum">03</div><div><div class="daydate">10 November · EVS</div><p><strong>Units 4–5:</strong> Environmental ethics, conservation, Chipko/Silent Valley/Bishnoi movements, sustainable development, Agenda 21, environmental laws, EPA 1986, waste rules, Montreal and Kyoto Protocols. Finish with a short test.</p></div></article>
+ </div></div>
+ <div class="phase"><div class="phase-title"><h3>Phase 2 – Data Structures (DSA)</h3><span class="phase-pill">Days 4–7</span></div><div class="plan">
+  <article class="day"><div class="daynum">04</div><div><div class="daydate">11 November · DSA</div><p><strong>Unit 1:</strong> Data structures, algorithms, complexity, asymptotic notations, arrays, row/column-major representation, sparse matrices and linked lists. Practise linked-list operations in C.</p></div></article>
+  <article class="day"><div class="daynum">05</div><div><div class="daydate">12 November · DSA</div><p><strong>Unit 2:</strong> Stack, push/pop, array and linked-list implementation, applications, prefix/postfix, recursion, Fibonacci, Tower of Hanoi, queues, circular queue, deque and priority queue.</p></div></article>
+  <article class="day"><div class="daynum">06</div><div><div class="daydate">13 November · DSA</div><p><strong>Unit 3:</strong> Linear and binary search, hashing, collision resolution, insertion, selection, quick, heap, merge, radix and shell sort. Trace algorithms and practise C programs.</p></div></article>
+  <article class="day"><div class="daynum">07</div><div><div class="daydate">14 November · DSA</div><p><strong>Units 4–5:</strong> Binary trees, BST, tree traversals, Huffman coding, AVL rotations, B-Tree, heaps, graphs, representations, BFS, DFS, spanning trees, Prim's and Kruskal's algorithms.</p></div></article>
+ </div></div>
+ <div class="phase"><div class="phase-title"><h3>Phase 3 – Discrete Mathematics</h3><span class="phase-pill">Days 8–10</span></div><div class="plan">
+  <article class="day"><div class="daynum">08</div><div><div class="daydate">15 November · Discrete Mathematics</div><p><strong>Units 1–2:</strong> Propositional logic, connectives, truth tables, tautology, contradiction, equivalence, quantifiers, inference, proof, induction, sets and set operations.</p></div></article>
+  <article class="day"><div class="daynum">09</div><div><div class="daydate">16 November · Discrete Mathematics</div><p><strong>Unit 3:</strong> Binary relations, reflexive, symmetric and transitive properties, equivalence relations, partial orders, posets, Hasse diagrams, lattices and Boolean algebra. Practise proofs.</p></div></article>
+  <article class="day"><div class="daynum">10</div><div><div class="daydate">17 November · Discrete Mathematics</div><p><strong>Units 4–5:</strong> Counting principles, permutations, combinations, binomial theorem, pigeonhole principle, recurrence relations, graph types, Euler/Hamiltonian graphs, trees, spanning trees and graph coloring.</p></div></article>
+ </div></div>
+ <div class="phase"><div class="phase-title"><h3>Phase 4 – Python Programming</h3><span class="phase-pill">Days 11–13</span></div><div class="plan">
+  <article class="day"><div class="daynum">11</div><div><div class="daydate">18 November · Python</div><p><strong>Units 1–2:</strong> Programming basics, interpreter vs compiler, Python prompt, input/output, errors, debugging, variables, data types, operators, strings, conditions, logical operators and try-except.</p></div></article>
+  <article class="day"><div class="daynum">12</div><div><div class="daydate">19 November · Python</div><p><strong>Units 3–4:</strong> Built-in and type-conversion functions, math functions, user-defined functions, parameters/arguments, business applications, file handling, lists, dictionaries and tuples. Practise programs.</p></div></article>
+  <article class="day"><div class="daynum">13</div><div><div class="daydate">20 November · Python</div><p><strong>Unit 5 + practical revision:</strong> Tkinter, windows, frames, Label, Entry, Button, Listbox, event handling, Pack, Grid and Place. Revise practical programs and write outputs.</p></div></article>
+ </div></div>
+ <div class="phase"><div class="phase-title"><h3>Phase 5 – Database Management System (DBMS)</h3><span class="phase-pill">Days 14–16</span></div><div class="plan">
+  <article class="day"><div class="daynum">14</div><div><div class="daydate">21 November · DBMS</div><p><strong>Units 1–2:</strong> DBMS architecture, data independence, relational model, keys, constraints, relational algebra, TRC/DRC, ER model, functional dependencies, attribute closure, candidate keys and normalization 1NF–5NF.</p></div></article>
+  <article class="day"><div class="daynum">15</div><div><div class="daydate">22 November · DBMS</div><p><strong>Unit 3:</strong> DDL, DML, SELECT, WHERE, ORDER BY, GROUP BY, HAVING, aggregate functions, joins, nested/correlated subqueries, views, constraints, triggers, procedures, indexes and TCL. Practise Oracle SQL.</p></div></article>
+  <article class="day"><div class="daynum">16</div><div><div class="daydate">23 November · DBMS</div><p><strong>Units 4–5:</strong> Transactions, ACID, schedules, conflict/view serializability, precedence graphs, 2PL, deadlock, logging, recovery, distributed transactions, B/B+ Trees, query optimization, NoSQL, CAP and security.</p></div></article>
+ </div></div>
+ <div class="phase"><div class="phase-title"><h3>Phase 6 – Computer Organization &amp; Architecture (COA)</h3><span class="phase-pill">Days 17–20</span></div><div class="plan">
+  <article class="day"><div class="daynum">17</div><div><div class="daydate">24 November · COA</div><p><strong>Unit 1:</strong> Number systems, base conversions, binary arithmetic, 2's complement, signed/unsigned numbers, logic gates, K-Map, adders, subtractors, multiplexers, encoders, decoders, flip-flops, registers and counters.</p></div></article>
+  <article class="day"><div class="daynum">18</div><div><div class="daydate">25 November · COA</div><p><strong>Unit 2:</strong> Von Neumann architecture, RTL, micro-operations, bus and memory transfers, instruction cycle, registers, instruction formats, addressing modes, stack organization and RISC vs CISC.</p></div></article>
+  <article class="day"><div class="daynum">19</div><div><div class="daydate">26 November · COA</div><p><strong>Unit 3:</strong> Addition/subtraction hardware, multiplication algorithms, Booth's multiplier, array multiplier, division algorithms and floating-point representation/arithmetic. Practise numerical problems.</p></div></article>
+  <article class="day"><div class="daynum">20</div><div><div class="daydate">27 November · COA</div><p><strong>Units 4–5:</strong> Memory hierarchy, RAM/ROM, cache, virtual memory, paging, segmentation, I/O, interrupts, DMA, IOP, hardwired/microprogrammed control, microinstructions, pipelining and speedup. Finish with a mixed mock test.</p></div></article>
+ </div></div>
+ <div class="notice"><strong>Study method for every day:</strong> 5–7 PM = understand the assigned topics and make notes. 9 PM–12 AM = solve questions, practise programs/numericals, write exam answers and take a short self-test. Do not switch to another subject that day.</div>
+</section>
+
+<section id="focus">
+ <div class="section-head"><h2>4. Subject-wise high-priority topics</h2><span class="small">Use these as your focused revision checklist</span></div>
+ <div class="subjects">
+  <article class="subject"><h3>Environmental Studies (EVS)</h3><ul><li>Ecosystem, indicator and keystone species</li><li>Air, water and soil pollution</li><li>3Rs, biomagnification and eutrophication</li><li>Global warming, climate change and ozone depletion</li><li>Chipko, Silent Valley and Bishnoi movements</li><li>Environment Protection Act, 1986</li></ul></article>
+  <article class="subject"><h3>Data Structures (DSA)</h3><ul><li>Linked List operations</li><li>Stack and Queue</li><li>Searching, hashing and sorting</li><li>BST and AVL rotations</li><li>BFS and DFS</li><li>Prim's and Kruskal's algorithms</li></ul></article>
+  <article class="subject"><h3>Discrete Mathematics</h3><ul><li>Truth tables and mathematical induction</li><li>Equivalence relations</li><li>Hasse diagrams and lattices</li><li>Permutations and combinations</li><li>Recurrence relations</li><li>Euler and Hamiltonian graphs</li></ul></article>
+  <article class="subject"><h3>Python Programming</h3><ul><li>Data types, operators and conditions</li><li>Loops and exception handling</li><li>Functions, parameters and arguments</li><li>File handling</li><li>Lists, tuples and dictionaries</li><li>Tkinter and event handling</li></ul></article>
+  <article class="subject"><h3>Database Management System</h3><ul><li>Keys and integrity constraints</li><li>Relational algebra</li><li>Normalization (1NF–5NF)</li><li>SQL joins and subqueries</li><li>ACID and serializability</li><li>2PL, deadlock and B+ Tree</li></ul></article>
+  <article class="subject"><h3>Computer Organization &amp; Architecture</h3><ul><li>Number system conversion and K-Map</li><li>2's complement</li><li>Booth's algorithm and array multiplier</li><li>Division and floating-point arithmetic</li><li>Cache and virtual memory</li><li>DMA, interrupts and pipelining</li></ul></article>
+ </div>
+</section>
+
+<section id="final">
+ <div class="section-head"><div><h2>5. Final revision before each examination</h2><div class="small">Use the days after the 20-day coverage round to revise the next exam subject.</div></div></div>
+ <div class="card" style="overflow-x:auto">
+  <table class="final-table"><thead><tr><th>Date</th><th>Revision / examination task</th></tr></thead><tbody>
+   <tr><td>28 Nov</td><td>EVS Units 1–3 complete revision</td></tr>
+   <tr><td>29 Nov</td><td>EVS Units 4–5 + mock test</td></tr>
+   <tr><td>30 Nov</td><td>EVS final revision + important definitions</td></tr>
+   <tr><td>01 Dec</td><td><span class="exam-badge">EVS EXAM</span> After exam: begin DSA revision</td></tr>
+   <tr><td>02 Dec</td><td>DSA full revision + C programs + mock test</td></tr>
+   <tr><td>03 Dec</td><td><span class="exam-badge">DSA EXAM</span> After exam: begin Discrete Math revision</td></tr>
+   <tr><td>04 Dec</td><td>Discrete Math formulas, proofs and numericals</td></tr>
+   <tr><td>05 Dec</td><td><span class="exam-badge">DISCRETE EXAM</span> After exam: begin Python revision</td></tr>
+   <tr><td>06 Dec</td><td>Python Units 1–3 + programs</td></tr>
+   <tr><td>07 Dec</td><td>Python Units 4–5 + practical revision</td></tr>
+   <tr><td>08 Dec</td><td><span class="exam-badge">PYTHON EXAM</span> After exam: begin DBMS revision</td></tr>
+   <tr><td>09 Dec</td><td>DBMS SQL + normalization + transactions</td></tr>
+   <tr><td>10 Dec</td><td><span class="exam-badge">DBMS EXAM</span> After exam: begin COA revision</td></tr>
+   <tr><td>11 Dec</td><td>COA numericals, algorithms and diagrams</td></tr>
+   <tr><td>12 Dec</td><td><span class="exam-badge">COA EXAM</span></td></tr>
+  </tbody></table>
+ </div>
+</section>
+
+<section id="tracker">
+ <div class="section-head"><div><h2>6. Personal progress tracker</h2><div class="small">Tick each task when you complete it. Your progress is saved in this browser.</div></div><button class="btn secondary" onclick="window.print()">Print / Save as PDF</button></div>
+ <div class="card">
+  <div class="progress-wrap"><strong>Overall preparation progress</strong><span class="progress-number" id="percent">0%</span></div>
+  <div class="progressbar"><div id="bar"></div></div>
+  <div class="small" id="count">0 of 13 tasks completed</div>
+  <div class="checklist" id="checklist">
+   <label class="checkitem"><input type="checkbox" data-id="evs"><span>EVS – Complete Units 1–5</span></label>
+   <label class="checkitem"><input type="checkbox" data-id="dsa"><span>DSA – Complete Units 1–5</span></label>
+   <label class="checkitem"><input type="checkbox" data-id="dm"><span>Discrete Mathematics – Complete Units 1–5</span></label>
+   <label class="checkitem"><input type="checkbox" data-id="python"><span>Python – Complete Units 1–5</span></label>
+   <label class="checkitem"><input type="checkbox" data-id="dbms"><span>DBMS – Complete Units 1–5</span></label>
+   <label class="checkitem"><input type="checkbox" data-id="coa"><span>COA – Complete Units 1–5</span></label>
+   <label class="checkitem"><input type="checkbox" data-id="cprograms"><span>Practise important DSA C programs</span></label>
+   <label class="checkitem"><input type="checkbox" data-id="pyprograms"><span>Practise Python practical programs</span></label>
+   <label class="checkitem"><input type="checkbox" data-id="sql"><span>Practise DBMS SQL queries</span></label>
+   <label class="checkitem"><input type="checkbox" data-id="maths"><span>Solve Discrete Mathematics numericals</span></label>
+   <label class="checkitem"><input type="checkbox" data-id="coanumericals"><span>Solve COA numerical problems</span></label>
+   <label class="checkitem"><input type="checkbox" data-id="notes"><span>Prepare short notes for all subjects</span></label>
+   <label class="checkitem"><input type="checkbox" data-id="mocks"><span>Complete six subject-wise mock tests</span></label>
+  </div>
+  <div style="margin-top:15px"><button class="btn secondary" id="reset">Reset progress</button></div>
+ </div>
+</section>
+
+<section>
+ <div class="section-head"><h2>7. Five rules for effective preparation</h2></div>
+ <div class="tiplist">
+  <div class="tip"><strong>1. Theory</strong><br>Prepare definitions, explanations, examples and advantages/disadvantages.</div>
+  <div class="tip"><strong>2. Numericals</strong><br>Practise 5–10 questions daily from Mathematics and COA.</div>
+  <div class="tip"><strong>3. Programming</strong><br>Write C, Python and SQL programs yourself.</div>
+  <div class="tip"><strong>4. Handwriting</strong><br>Practise important 5-mark and 10-mark answers.</div>
+  <div class="tip"><strong>5. Self-testing</strong><br>Test yourself for 20–30 minutes every night.</div>
+ </div>
+</section>
+</main>
+<footer>Prepared from the provided Semester III course-details PDF and examination timetable image · 2026</footer>
+<script>
+(function(){
+ const boxes=[...document.querySelectorAll('#checklist input[type="checkbox"]')];
+ const key='semester3_revision_tracker_2026';
+ function load(){
+  let saved={};try{saved=JSON.parse(localStorage.getItem(key)||'{}')}catch(e){}
+  boxes.forEach(b=>{b.checked=!!saved[b.dataset.id];updateLabel(b)});
+  updateProgress();
+ }
+ function updateLabel(b){b.closest('.checkitem').classList.toggle('done',b.checked)}
+ function updateProgress(){
+  const n=boxes.filter(b=>b.checked).length,p=Math.round(n/boxes.length*100);
+  document.getElementById('percent').textContent=p+'%';
+  document.getElementById('bar').style.width=p+'%';
+  document.getElementById('count').textContent=n+' of '+boxes.length+' tasks completed';
+ }
+ boxes.forEach(b=>b.addEventListener('change',()=>{
+  let saved={};try{saved=JSON.parse(localStorage.getItem(key)||'{}')}catch(e){}
+  saved[b.dataset.id]=b.checked;localStorage.setItem(key,JSON.stringify(saved));
+  updateLabel(b);updateProgress();
+ }));
+ document.getElementById('reset').addEventListener('click',()=>{
+  if(confirm('Reset all revision progress?')){
+   localStorage.removeItem(key);boxes.forEach(b=>{b.checked=false;updateLabel(b)});updateProgress();
+  }
+ });
+ load();
+})();
+</script>
+</body>
+</html>
